@@ -1,5 +1,5 @@
 # Deploy artifacts
-.dist/
+dist/
 # WebStorm files
 .idea/
 # npm
