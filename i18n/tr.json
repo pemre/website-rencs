@@ -1,0 +1,82 @@
+{
+ "token": {
+  "Home"     : "Ana Sayfa",
+  "About"    : "Hakkımızda",
+  "Works"    : "İşler",
+  "Contact"  : "İletişim",
+
+  "Welcome to Ren Creative Solutions." : "REN CREATIVE SOLUTIONS'a Hoşgeldiniz.",
+    "We are here to make your life a lot easier." :
+    "Hayatınızı kolaylaştırmak için buradayız.",
+  "Learn More" : "Daha Fazla",
+
+  "About Us"   : "Hakkımızda",
+  "A young team of designers and developers." : "Genç bir tasarım ve geliştirme takımı.",
+    "We bring your ideas to life by putting performance, accessibility and security at the center of our design thinking process." :
+    "Performans, erişilebilirlik ve güvenliği tasarım odaklı düşünme sürecimizin merkezine koyarak fikirlerinizi hayata geçiriyoruz.",
+  "Front-end Development" : "Front-end Geliştirme",
+    "Thanks to years of experience in Front-end development, we provide consulting services for your projects." :
+    "Front-end geliştirmedeki yılların deneyimiyle, projeleriniz için danışmanlık hizmeti sağlıyoruz.",
+  "Mobile App"            : "Mobil Uygulama",
+    "We deliver high-end iOS/Android and wearable apps, using both native and hybrid technologies as you prefer." :
+    "İsteğinize göre doğal veya melez yazılımlarla son teknoloji iOS/Android ve giyilebilir uygulamalar üretiyoruz.",
+  "Website"               : "Website",
+    "We re/design and build responsive websites, based on your requirements and specifications." :
+    "İhtiyaç ve tariflerinize uygun olarak uyumlu (responsive) websiteleri tasarlayıp kodluyoruz.",
+  "Catalogue"             : "Katalog",
+    "We design print-ready, custom size catalogues that will present your company professional and trustworthy." :
+    "Şirketinizin profesyonelliğini ve güvenilirliğini yansıtan, baskıya hazır, özel ölçülerde kataloglar tasarlıyoruz.",
+  "Graphic Design"        : "Grafik Tasarım",
+    "You may need custom graphic elements like business cards, fonts, animations and even pixel art! Let us help you." :
+    "Kartvizit, yazıtipi, animasyonlar ve hatta pixel art gibi özel grafik öğelere ihtiyacınız olabilir! Size yardımcı olalım.",
+  "Logo"                  : "Logo",
+    "We create custom and fascinating logo designs from scratch based on the brief you give." :
+    "Verdiğiniz bilgiler doğrultusunda sıfırdan size özel ve büyüleyici logo tasarımları yapıyoruz.",
+
+  "Selected works you'll like." : "Seveceğiniz seçilmiş işler.",
+    "Here are some examples from some of our recent projects." :
+    "İşte yakın zamandaki projelerimizden bazı örnekler.",
+  "Front-end"            : "Front-end",
+  "App"                  : "Uygulama",
+  "Pixel Art"            : "Pixel Art",
+  "Maximum Card"         : "Maximum Kart",
+  "Commander Kenan"      : "Kenan Komutan",
+  "Tea&Coffee Diary"     : "Çay Kahve Günlüğü",
+  "Datça Natural Houses" : "Datça Naturel Evler",
+  "Edu Technology"       : "Edu Teknoloji",
+  "Geylani Engineering"  : "Geylani Mühendislik",
+  "SEE ALL"              : "TÜMÜNÜ GÖR",
+
+  "Site Links"     : "Bağlantılar",
+  "Terms"          : "Kullanım Koşulları",
+  "Privacy"        : "Gizlilik İlkeleri",
+  "Email"          : "Eposta",
+  "Your message"   : "İletiniz",
+  "Send"           : "Gönder",
+  "Copyright"      : "Telif",
+  "Back to Top"    : "Yukarı Çık",
+
+  "Terms of Use"                    : "Kullanım Koşulları",
+    "Last updated"                  : "Son güncelleme",
+    "Terms Intro Text1"             : "Lütfen Ren Creative Solutions (\"biz\", \"bizim\") tarafından işletilen http://rencs.com websitesini (\"Website\") kullanmadan önce bu Kullanım Koşulları'nı (\"Koşullar\") dikkatlice okuyunuz.",
+    "Terms Intro Text2"             : "Bu Koşullar tüm ziyaretçileri bağlar. Bu Koşulların her hangi bir bölümüne katılmıyorsanız Website'sine erişmeyebilirsiniz.",
+  "Termination"                     : "Sonlandırma",
+    "Termination Text"              : "Website'ye erişimi önceden bildirmeksizin anında askıya alabilir veya sonlandırabiliriz.",
+  "Links To Other Websites"         : "Diğer Websilerine Bağlantılar",
+    "Links To Other Websites Text1" : "Website'miz Ren Creative Solutions tarafından sahip olunmayan veya işletilmeyen üçüncü taraf websitelerine ve hizmetlere bağlantı içerebilir.",
+    "Links To Other Websites Text2" : "Üçüncü taraf websiteleri ve hizmetlerinin içeriği, gizlilik ilkeleri veya uygulamaları hakkında herhangi bir denetim sahibi değiliz ve sorumluluk kabul etmiyoruz.",
+  "Changes"                         : "Değişiklikler",
+    "Changes Text"                  : "Koşullar'ı her hangi bir zamanda değiştirme veya yenileme hakkımız saklıdır.",
+  "Contact Us"                      : "İletişim",
+    "Contact Us Text"               : "Bu Koşullar hakkında sorularınız varsa lütfen bizimle iletişime geçin.",
+
+  "Our privacy policy" : "Gizlilik ilkelerimiz",
+    "In short: We don't collect or share personal information. We don't track or profile you." :
+    "Özetle: Kişisel bilgi toplamıyor ve paylaşmıyoruz. Sizi izlemiyoruz veya profil çıkarmıyoruz.",
+
+  "Your message has been sent successfully" :
+    "İletiniz başarılı bir şekilde gönderildi",
+  "Thank your for your interest!" :
+    "İlginiz için teşekkürler!"
+ }
+}
