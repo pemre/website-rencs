@@ -31,6 +31,7 @@ Before opening a PR:
 2. Confirm `index.html` still references existing local assets.
 3. If changing UI or layout, preview the page locally with a static server such as `python3 -m http.server`.
 4. For contact form changes, keep the EmailJS browser SDK script in `index.html` and the public key/template IDs in `js/main.js` aligned with the EmailJS project.
+5. Contact form success and failure states use inline Magnific Popup modals in `index.html`; avoid replacing them with browser alerts.
 
 ## PR notes
 

@@ -88,6 +88,10 @@
   "Could not load the e-mail service. Please try again later." :
     "E-posta hizmeti yüklenemedi. Lütfen daha sonra tekrar deneyin.",
   "Sent!" :
-    "Gönderildi!"
+    "Gönderildi!",
+  "Your message could not be sent" :
+    "İletiniz gönderilemedi",
+  "Please try again later or contact us directly." :
+    "Lütfen daha sonra tekrar deneyin veya bizimle doğrudan iletişime geçin."
  }
 }

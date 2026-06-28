@@ -186,6 +186,15 @@ $(document).ready(function () {
         return text;
     }
 
+    function openContactPopup(selector) {
+        $.magnificPopup.open({
+            items: {
+                src: selector,
+                type: 'inline'
+            }
+        });
+    }
+
     function validateContactForm(showErrors) {
         var hasValidEmail = isValidEmail($email.val()),
             hasMessage = $.trim($message.val()).length > 0,
@@ -222,7 +231,7 @@ $(document).ready(function () {
         }
 
         if (!window.emailjs) {
-            alert(translateContactText('Could not load the e-mail service. Please try again later.'));
+            openContactPopup('#message-failure');
             return;
         }
 
@@ -230,14 +239,15 @@ $(document).ready(function () {
 
         emailjs.sendForm(emailjsServiceID, emailjsTemplateID, this)
             .then(function () {
-                alert(translateContactText('Sent!'));
+                openContactPopup('#message');
                 $form[0].reset();
                 showError($emailError, false);
                 showError($messageError, false);
                 showError($captchaError, false);
                 $form.captcha();
             }, function (err) {
-                alert(JSON.stringify(err));
+                console.error('EmailJS send failed:', err);
+                openContactPopup('#message-failure');
                 $submit.prop('disabled', false);
             })
             .then(function () {
