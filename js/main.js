@@ -157,65 +157,92 @@ $(document).ready(function () {
     /** ----------------------------------------------------
      *   Contact Form
      *  ---------------------------------------------------- */
-    // Variable to hold request
-    var request;
-    // Bind to the submit event of our form
-    $form.submit(function (event) {
-        // Abort any pending request
-        if (request) {
-            request.abort();
+    var emailjsServiceID = 'default_service',
+        emailjsTemplateID = 'template_rencs_0ypc68h',
+        $email = $('#contact-email'),
+        $message = $('#contact-message'),
+        $submit = $('#contact-submit'),
+        $emailError = $('#email-error'),
+        $messageError = $('#message-error'),
+        $captchaError = $('#captcha-error');
+
+    if (window.emailjs) {
+        emailjs.init('sWNprp7XA8KpG7MNg');
+    }
+
+    function isValidEmail(value) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    }
+
+    function showError($error, show) {
+        $error.prop('hidden', !show);
+    }
+
+    function translateContactText(text) {
+        if (lang && typeof lang.translate === 'function') {
+            return lang.translate(text);
         }
-        // setup some local variables
-        var $form = $(this);
 
-        // Let's select and cache all the fields
-        var $inputs = $form.find("input, select, button, textarea");
+        return text;
+    }
 
-        // Serialize the data in the form
-        var serializedData = $form.serialize();
+    function validateContactForm(showErrors) {
+        var hasValidEmail = isValidEmail($email.val()),
+            hasMessage = $.trim($message.val()).length > 0,
+            hasCaptcha = !$submit.prop('disabled');
 
-        // Let's disable the inputs for the duration of the Ajax request.
-        // Note: we disable elements AFTER the form data has been serialized.
-        // Disabled form elements will not be serialized.
-        $inputs.prop("disabled", true);
+        if (showErrors) {
+            showError($emailError, !hasValidEmail);
+            showError($messageError, !hasMessage);
+            showError($captchaError, !hasCaptcha);
+        }
 
-        // Fire off the request to /form.php
-        request = $.ajax({
-            url: "../message/send.php",
-            type: "post",
-            data: serializedData
-        });
+        return hasValidEmail && hasMessage && hasCaptcha;
+    }
 
-        // Callback handler that will be called on success
-        request.done(function (/*response, textStatus, jqXHR*/) {
-            $form.captcha();
-            $('#mc-form input[type=email], #mc-form input[type=text], #mc-form textarea').val("");
-            $.magnificPopup.open({
-                items: {
-                    src: '#message',
-                    type: 'inline'
-                }
-            });
-        });
+    $email.on('blur input', function (event) {
+        validateContactForm(event.type === 'blur' || $emailError.is(':visible'));
+    });
 
-        // Callback handler that will be called on failure
-        request.fail(function (jqXHR, textStatus, errorThrown) {
-            // Log the error to the console
-            console.error(
-                "The following error occurred: " +
-                textStatus, errorThrown
-            );
-        });
+    $message.on('blur input', function (event) {
+        validateContactForm(event.type === 'blur' || $messageError.is(':visible'));
+    });
 
-        // Callback handler that will be called regardless
-        // if the request failed or succeeded
-        request.always(function () {
-            // Reenable the inputs
-            $inputs.prop("disabled", false);
-        });
+    $form.on('keyup', '#captchaInput', function () {
+        if ($captchaError.is(':visible')) {
+            validateContactForm(true);
+        }
+    });
 
-        // Prevent default posting of form
+    $form.submit(function (event) {
         event.preventDefault();
+
+        if (!validateContactForm(true)) {
+            return;
+        }
+
+        if (!window.emailjs) {
+            alert(translateContactText('Could not load the e-mail service. Please try again later.'));
+            return;
+        }
+
+        $submit.prop('disabled', true);
+
+        emailjs.sendForm(emailjsServiceID, emailjsTemplateID, this)
+            .then(function () {
+                alert(translateContactText('Sent!'));
+                $form[0].reset();
+                showError($emailError, false);
+                showError($messageError, false);
+                showError($captchaError, false);
+                $form.captcha();
+            }, function (err) {
+                alert(JSON.stringify(err));
+                $submit.prop('disabled', false);
+            })
+            .then(function () {
+                validateContactForm(false);
+            });
     });
 
     /** ----------------------------------------------------

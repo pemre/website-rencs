@@ -38,7 +38,7 @@ var Lang=function(){"use strict";var t=function(){this._fireEvents=!0,this._dyna
             totalNr = rndmNr1 + rndmNr2;
         $(label).text(rndmNr1 + " + " + rndmNr2 + " =");
 
-        $(input).keyup(function() {
+        $(input).off('keyup.captcha').on('keyup.captcha', function() {
             if ($(this).val() == totalNr)
                 submit.removeAttr('disabled').addClass('button-primary');
             else
