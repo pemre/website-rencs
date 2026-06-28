@@ -52,6 +52,7 @@
   "Privacy"        : "Gizlilik İlkeleri",
   "Email"          : "Eposta",
   "Your message"   : "İletiniz",
+  "Your e-mail"    : "E-posta adresiniz",
   "Send"           : "Gönder",
   "Copyright"      : "Telif",
   "Back to Top"    : "Yukarı Çık",
@@ -77,6 +78,16 @@
   "Your message has been sent successfully" :
     "İletiniz başarılı bir şekilde gönderildi",
   "Thank your for your interest!" :
-    "İlginiz için teşekkürler!"
+    "İlginiz için teşekkürler!",
+  "Please enter a valid e-mail address." :
+    "Lütfen geçerli bir e-posta adresi girin.",
+  "Please enter a message." :
+    "Lütfen bir ileti girin.",
+  "Please solve the math question." :
+    "Lütfen matematik sorusunu çözün.",
+  "Could not load the e-mail service. Please try again later." :
+    "E-posta hizmeti yüklenemedi. Lütfen daha sonra tekrar deneyin.",
+  "Sent!" :
+    "Gönderildi!"
  }
 }

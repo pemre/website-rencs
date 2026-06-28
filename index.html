@@ -332,10 +332,17 @@
 
                 <h4 lang="en">Contact</h4>
                 <div class="subscribe-form">
-                    <form id="mc-form">
-                        <input type="email" name="email" placeholder="Email" aria-label="Email" required lang="en">
-                        <textarea name="message" placeholder="Your message" aria-label="Your message" required lang="en"></textarea>
-                        <input type="submit" value="▶" style="font-size: 2rem; padding: 0 2rem">
+                    <form id="mc-form" novalidate>
+                        <div class="form-field">
+                            <input id="contact-email" type="email" name="email" placeholder="Your e-mail" aria-label="Your e-mail" required lang="en">
+                            <p class="form-error" id="email-error" aria-live="polite" hidden><span>*</span> <span lang="en">Please enter a valid e-mail address.</span></p>
+                        </div>
+                        <div class="form-field">
+                            <textarea id="contact-message" name="message" placeholder="Your message" aria-label="Your message" required lang="en"></textarea>
+                            <p class="form-error" id="message-error" aria-live="polite" hidden><span>*</span> <span lang="en">Please enter a message.</span></p>
+                        </div>
+                        <p class="form-error" id="captcha-error" aria-live="polite" hidden><span>*</span> <span lang="en">Please solve the math question.</span></p>
+                        <input id="contact-submit" type="submit" value="▶" aria-label="Send" style="font-size: 2rem; padding: 0 2rem" lang="en">
                     </form>
                 </div>
 
@@ -414,6 +421,7 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/plugins.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

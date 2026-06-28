@@ -1776,6 +1776,19 @@ footer ul li {
 .footer-main .footer-subscribe .subscribe-form textarea {
 	resize: none;
 }
+.footer-main .footer-subscribe .subscribe-form input[disabled] {
+	cursor: not-allowed;
+}
+.footer-main .footer-subscribe .subscribe-form .form-error {
+	color: #ff7b29;
+	font-size: 1.2rem;
+	line-height: 1.4;
+	margin: -1rem 0 1.2rem;
+}
+.footer-main .footer-subscribe .subscribe-form .form-error span:first-child {
+	color: #ff3b30;
+	font-weight: bold;
+}
 .footer-main .footer-subscribe .subscribe-form .subscribe-message {
 	font-family: 'Raleway', sans-serif;
 	font-weight: bold;

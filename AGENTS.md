@@ -21,6 +21,7 @@ This repository is the static website for **Ren Creative Solutions** (`rencs.com
 - Preserve the existing HTML structure, CSS class names, and asset paths unless the issue requires a change.
 - Keep content accessible: meaningful `alt` text, valid headings, and no unnecessary JavaScript.
 - For text shown on the site, update both the English markup and `i18n/tr.json` when the string is language-switchable.
+- Update `AGENTS.md` whenever a website change adds or changes project conventions, integrations, or verification steps.
 
 ## Verification
 
@@ -29,6 +30,7 @@ Before opening a PR:
 1. Check `git diff` for unintended asset or formatting churn.
 2. Confirm `index.html` still references existing local assets.
 3. If changing UI or layout, preview the page locally with a static server such as `python3 -m http.server`.
+4. For contact form changes, keep the EmailJS browser SDK script in `index.html` and the public key/template IDs in `js/main.js` aligned with the EmailJS project.
 
 ## PR notes
 
